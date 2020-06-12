@@ -1,0 +1,84 @@
+.about {
+  background-color: $bg--alt2;
+}
+.about__wrapper {
+  @include section-width;
+  @include paddings;
+  @include centers;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 55px;
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  &::before {
+    left: -380px;
+    bottom: -15px;
+    width: 363px;
+    height: 724px;
+    background-image: url("../../image/about-micro.png");
+  }
+  &::after {
+    left: -20px;
+    bottom: -35px;
+    width: 621px;
+    height: 231px;
+    background-image: url("../../image/about-water-bg.png");
+  }
+}
+.about__title {
+  width: 100%;
+  @include main-title;
+  margin-bottom: 60px;
+}
+.about__video-container {
+  width: 40%;
+  margin-right: 15px;
+  flex-grow: 1;
+  position: relative;
+}
+.about__play-btn {
+  @include play-btn;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-39px, -39px);
+}
+.about__list {
+  width: 40%;
+  margin-left: 15px;
+  flex-grow: 1;
+  padding-left: 0;
+}
+.about__item {
+  font-size: 16px;
+  line-height: 24px;
+  background-color: $bg--main;
+  margin-bottom: 10px;
+  padding-left: 67px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 13px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 22px;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("../../image/blue-plus.png");
+    transform: translateY(-50%);
+  }
+}

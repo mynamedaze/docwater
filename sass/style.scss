@@ -1,0 +1,34 @@
+// global
+@import "global/fonts";
+@import "global/variables";
+@import "global/mixins";
+@import "global/scaffolding";
+
+//owl-carousel
+@import "libs/owl.carousel.min.scss";
+@import "libs/owl.theme.default.min.scss";
+
+//fancy-box
+@import "libs/jquery.fancybox";
+
+//components
+@import 'components/slidervid';
+@import 'components/common';
+@import 'components/sertif';
+@import 'components/main-nav.scss';
+@import 'components/footer-nav';
+
+//blocks
+@import 'blocks/header';
+@import 'blocks/intro';
+@import 'blocks/utp';
+@import 'blocks/videotest';
+@import 'blocks/othervid';
+@import 'blocks/doctors';
+@import 'blocks/clients';
+@import 'blocks/family';
+@import 'blocks/feedback';
+@import 'blocks/about';
+@import 'blocks/buy';
+@import 'blocks/director';
+@import 'blocks/footer';

@@ -1,0 +1,13 @@
+.footer-nav__list {
+  padding-left: 0;
+  margin-top: 50px;
+}
+.footer-nav__item {
+  margin-top: 16px;
+}
+.footer-nav__link {
+  color: $color--alt1;
+  &:visited {
+    color: $color--alt1;
+  }
+}

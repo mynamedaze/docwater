@@ -1,0 +1,25 @@
+.sertif {
+  display: flex;
+  justify-content: space-around;
+}
+.sertif__item {
+  width: 23%;
+}
+.sertif__img-container {
+  margin-left: 28px;
+  margin-right: 28px;
+  padding: 48px 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("../../image/painting-border.jpg");
+  box-shadow: 0 0 30px 0 rgba(66, 58, 58, .5);
+}
+.sertif__description {
+  text-align: center;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  display: block;
+  margin-top: 40px;
+}

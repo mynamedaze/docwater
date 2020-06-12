@@ -1,0 +1,217 @@
+.page-footer {
+  background-color: #2e3336;
+  padding-top: 58px;
+  font-size: 16px;
+  color: $color--alt1;
+  a {
+    color: $color--alt1;
+    &:visited,
+    &:active {
+      color: $color--alt1;
+    }
+    &:hover {
+      color: #9afffa;
+    }
+  }
+}
+.page-footer__wrapper {
+  @include section-width;
+  @include paddings;
+  @include centers;
+  display: flex;
+}
+//left-side
+.page-footer__left-side {
+  width: 390px;
+  margin-right: auto;
+}
+.page-footer__logo-container {
+  display: flex;
+  align-items: center;
+}
+.page-footer__logo-img-container {
+  width: 81px;
+  flex-shrink: 0;
+  margin-right: 22px;
+}
+.page-footer__title {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #9afffa;
+}
+.page-footer__socials {
+  margin-top: 30px;
+}
+.page-footer__social-list {
+  padding-left: 0;
+  display: flex;
+  color: $color--alt1;
+  font-size: 0;
+  margin-top: 20px;
+}
+.page-footer__social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #25282a;
+  display: block;
+  margin-right: 15px;
+}
+.page-footer__social-link {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.page-footer__social-link--instagram {
+  background-size: 20px 20px;
+  background-image: url("../../image/instagram.png");
+}
+.page-footer__social-link--vk {
+  background-size: 24px 14px;
+  background-image: url("../../image/vk.png");
+}
+.page-footer__social-link--fb {
+  background-size: 11px 21px;
+  background-image: url("../../image/fb.png");
+}
+.page-footer__social-link--youtube {
+  background-size: 26px 20px;
+  background-image: url("../../image/youtube.png");
+}
+.page-footer__payments {
+  margin-top: 22px;
+}
+.page-footer__payments-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0;
+  background-color: #fff;
+  height: 60px;
+  border-radius: 60px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.page-footer__copyright {
+  margin-top: 13px;
+  display: block;
+  text-align: center;
+  background-color: #25282a;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 16px;
+  padding-bottom: 20px;
+  border-radius: 100px;
+}
+//menu
+.page-footer__menu-container {
+  margin-left: auto;
+}
+.page-footer__menu-title {
+  font-family: $font--alt;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 0;
+  margin-top: 20px;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: -17px;
+    left: 0;
+    width: 46px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #9afffa;
+  }
+}
+//contacts
+.page-footer__contacts-container {
+  margin-right: 0;
+  margin-left: 108px;
+  width: 390px;
+}
+.page-footer__contacts-title {
+  font-family: $font--alt;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 0;
+  margin-top: 20px;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: -17px;
+    left: 0;
+    width: 46px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #9afffa;
+  }
+}
+.page-footer__contacts-list {
+  margin-top: 50px;
+  padding-left: 0;
+}
+.page-footer__contacts-item {
+  margin-top: 17px;
+  position: relative;
+  padding-left: 38px;
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 1px;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+.page-footer__contacts-item--phone {
+  &::before {
+    background-size: 19px 19px;
+    background-image: url("../../image/contacts-phone.png");
+  }
+}
+.page-footer__contacts-item--mail {
+  &::before {
+    background-size: 20px 16px;
+    background-image: url("../../image/contacts-mail.png");
+  }
+}
+.page-footer__contacts-item--site {
+  &::before {
+    background-size: 20px 20px;
+    background-image: url("../../image/contacts-site.png");
+  }
+}
+.page-footer__contacts-item--address {
+  &::before {
+    background-size: 16px 20px;
+    background-image: url("../../image/contacts-address.png");
+  }
+}
+.page-footer__contacts-item--time {
+  &::before {
+    background-size: 20px 20px;
+    background-image: url("../../image/contacts-time.png");
+  }
+}
+.page-footer__address {
+  font-style: normal;
+}
+//chance
+.page-footer__chance {
+  display: block;
+  margin-top: 34px;
+  text-align: center;
+  padding-top: 17px;
+  padding-bottom: 16px;
+  background-color: #25282a;
+  @include paddings;
+}

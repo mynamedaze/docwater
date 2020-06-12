@@ -1,0 +1,184 @@
+@mixin paddings {
+  @media #{$max-mobile-width} {
+    padding-left: $padding--mobile;
+    padding-right: $padding--mobile;
+  }
+  @media #{$min-tablet-width} {
+    padding-left: $padding--tablet;
+    padding-right: $padding--tablet;
+  }
+  @media #{$min-desktop-width} {
+    padding-left: $padding--desktop;
+    padding-right: $padding--desktop;
+  }
+}
+@mixin centers {
+  margin-left: auto;
+  margin-right: auto;
+}
+@mixin section-width {
+  max-width: $max-desktop-wrapper;
+}
+@mixin defaults {
+  font-family: $font--main;
+  font-weight: 300;
+  color: $color--main;
+  margin: 0;
+  font-size: 14px;
+  transition: all 0.2s ease 0s;
+  input,
+  textarea,
+  select {
+    font-size: 14px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  ul {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+    transition: all 0.2s ease 0s;
+  }
+}
+@mixin main-btn {
+  transition: 0.1s 0s all;
+  height: 75px;
+  border-radius: 30px;
+  border: 0 solid transparent;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1474d5+0,1f87f0+100 */
+  background: #1474d5; /* Old browsers */
+  background: -moz-linear-gradient(left,  #1474d5 0%, #1f87f0 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  #1474d5 0%,#1f87f0 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #1474d5 0%,#1f87f0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1474d5', endColorstr='#1f87f0',GradientType=1 ); /* IE6-9 */
+  color: #ffffff;
+  width: 305px;
+  box-shadow: -2px -2px 10px inset rgba(156, 205, 255, 0.9), 0 3px 0 0 #0a4b8b;
+  &:hover {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1bacff+0,0096ff+100 */
+    background: #1bacff; /* Old browsers */
+    background: -moz-linear-gradient(left,  #1bacff 0%, #0096ff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #1bacff 0%,#0096ff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #1bacff 0%,#0096ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1bacff', endColorstr='#0096ff',GradientType=1 ); /* IE6-9 */
+    box-shadow: -2px -2px 10px inset rgba(156, 205, 255, 1), 0 3px 0 0 #0a4b8b, 0 9px 9px 7px rgba(23, 120, 219, 0.3);
+  }
+  &:active {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#005dbc+0,005dbc+100 */
+    background: #005dbc; /* Old browsers */
+    background: -moz-linear-gradient(left,  #005dbc 0%, #005dbc 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #005dbc 0%,#005dbc 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #005dbc 0%,#005dbc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005dbc', endColorstr='#005dbc',GradientType=1 ); /* IE6-9 */
+    box-shadow: -2px -2px 10px inset rgba(156, 205, 255, 1), 0 1px 0 0 rgba(10, 75, 139, 1);
+  }
+}
+@mixin alt-btn {
+  transition: 0.1s 0s all;
+  border: 1px solid #1d76ce;
+  height: 75px;
+  border-radius: 32px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: transparent;
+  color: $color--main;
+  &:hover {
+    border: 1px solid #0096ff;
+  }
+  &:active {
+    border: 1px solid #1d76ce;
+  }
+}
+@mixin play-btn {
+  transition: 0.2s 0s all;
+  height: 78px;
+  width: 78px;
+  border-radius: 50%;
+  border: 0 solid transparent;
+  font-size: 0;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#87feff+0,32a5ee+100 */
+  background: #87feff; /* Old browsers */
+  background: url("../../image/play-button.png"), -moz-linear-gradient(-45deg,  #87feff 0%, #32a5ee 100%); /* FF3.6-15 */
+  background: url("../../image/play-button.png"), -webkit-linear-gradient(-45deg,  #87feff 0%,#32a5ee 100%); /* Chrome10-25,Safari5.1-6 */
+  background: url("../../image/play-button.png"), linear-gradient(135deg,  #87feff 0%,#32a5ee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87feff', endColorstr='#32a5ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background-repeat: no-repeat;
+  background-position: 55% 50%, center;
+  background-size: 20px auto, 100%;
+  color: #ffffff;
+  box-shadow: -2px -2px 10px inset rgba(161, 255, 252, 0.9), 0 3px 0 0 #30a9db;
+  &:hover {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7dfffd+0,7cc4f1+100 */
+    background: #7dfffd; /* Old browsers */
+    background: url("../../image/play-button.png"), -moz-linear-gradient(-45deg,  #7dfffd 0%, #7cc4f1 100%); /* FF3.6-15 */
+    background: url("../../image/play-button.png"), -webkit-linear-gradient(-45deg,  #7dfffd 0%,#7cc4f1 100%); /* Chrome10-25,Safari5.1-6 */
+    background: url("../../image/play-button.png"), linear-gradient(135deg,  #7dfffd 0%,#7cc4f1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7dfffd', endColorstr='#7cc4f1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background-repeat: no-repeat;
+    background-position: 55% 50%, center;
+    background-size: 20px auto, 100%;
+    box-shadow: -2px -2px 10px inset rgba(166, 220, 255, .9), 0 3px 0 0 #30a9db;
+  }
+  &:active {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#005dbc+0,005dbc+100 */
+    background: #32a5ee; /* Old browsers */
+    background: url("../../image/play-button.png"), -moz-linear-gradient(left, #32a5ee 0%, #32a5ee 100%); /* FF3.6-15 */
+    background: url("../../image/play-button.png"), -webkit-linear-gradient(left, #32a5ee 0%, #32a5ee 100%); /* Chrome10-25,Safari5.1-6 */
+    background: url("../../image/play-button.png"), linear-gradient(to right, #32a5ee 0%, #32a5ee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#32a5ee', endColorstr='#32a5ee', GradientType=1); /* IE6-9 */
+    background-repeat: no-repeat;
+    background-position: 55% 50%, center;
+    background-size: 20px auto, 100%;
+    box-shadow: -2px -2px 10px inset rgba(166, 220, 255, .9), 0 2px 0 0 #30a9db;
+  }
+}
+@mixin main-input {
+  height: 75px;
+  border: 0 solid transparent;
+  border-radius: 32px;
+  font-size: 18px;
+  background-color: #fff;
+  box-shadow: 0 14px 49px 2px rgba(121, 125, 127, .2);
+}
+@mixin slider-arrow {
+  transition: 0.2s 0s all;
+  font-size: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #fff !important;
+  box-shadow: 0 7px 18px 1px rgba(121, 125, 127, .1);
+  &:hover {
+    box-shadow: 0 14px 49px 2px rgba(121, 125, 127, .3);
+  }
+  &:active {
+    box-shadow: 0 7px 76px 1px rgba(121, 125, 127, .2);
+  }
+}
+@mixin main-title {
+  font-size: 55px;
+  letter-spacing: -2px;
+  font-family: $font--alt;
+  font-weight: 400;
+  line-height: 60px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+@mixin link {
+  color: $color-link;
+  text-transform: uppercase;
+  &:hover {
+    color: $color-link-hover;
+  }
+  &:active {
+    color: $color-link-active;
+  }
+}

@@ -1,0 +1,98 @@
+.intro {
+}
+.intro__slider {
+  .owl-nav {
+    height: 0;
+    transform: translateY(-130px);
+    @include section-width;
+    @include paddings;
+    @include centers;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    .owl-prev, .owl-next {
+      @include slider-arrow;
+      background-repeat: no-repeat !important;
+      background-position: center !important;
+      background-size: 7px 17px !important;
+      font-size: 0 !important;
+    }
+    .owl-prev {
+      margin-right: 7px;
+      background-image: url("../../image/arrow-slider--left.png") !important;
+    }
+    .owl-next {
+      margin-left: 7px;
+      background-image: url("../../image/arrow-slider--right.png") !important;
+    }
+  }
+  .owl-stage {
+    display: flex;
+  }
+  .owl-item {
+    display: flex;
+    flex: 1 0 auto;
+  }
+}
+.intro__slider-container {
+  max-width: $max-desktop-wrapper;
+  @include centers;
+}
+.intro__title {
+  font-family: $font--alt;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  max-width: 810px;
+  margin-top: 0;
+}
+.intro__slide {
+  width: 100%;
+  padding-bottom: 172px;
+  background-color: $bg-intro-slider;
+  padding-top: 75px;
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+.intro__slide--1 {
+  background-image: url("../../image/slider-bg__1--desktop.jpg");
+}
+.intro__slide--2 {
+  background-image: url("../../image/slider-bg__2--desktop.jpg");
+  .intro__title {
+    max-width: 600px;
+  }
+}
+.intro__slide--3 {
+  background-image: url("../../image/slider-bg__3--desktop.jpg");
+}
+.intro__utp-list {
+  padding-left: 0;
+  width: 720px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.intro__utp-item {
+  font-size: 18px;
+  line-height: 24px;
+  width: 50%;
+  margin-top: 20px;
+  padding-left: 36px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 1px;
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url("../../image/blue-plus.png");
+  }
+}
+.intro__button {
+  @include main-btn;
+}

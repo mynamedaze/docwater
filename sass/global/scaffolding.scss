@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html, body {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+body {
+  margin: 0;
+  @include defaults;
+}
+.visually-hidden{
+  position: absolute;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.visually-hidden2{
+  height: 0px !important;
+  overflow: hidden;
+}
+main {
+  overflow: hidden;
+}
+input[type="submit"] {
+  cursor: pointer;
+}
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+}
+input:focus,
+button:focus {
+  outline-width: 0;
+  outline: none;
+}
+button {
+  cursor: pointer;
+  font-family: $font--main;
+}
+label {
+  cursor: pointer;
+}
+.clearfix::after {
+  content: ""; /* Генерируем пустой элемент */
+  clear: both; /* Отменяем обтекание*/
+  display: block; /* Блочный элемент */
+}
+.disable {
+  display: none !important;
+}
+.blue-title {
+  color: $color--alt2;
+}

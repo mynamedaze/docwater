@@ -1,0 +1,126 @@
+.director__wrapper {
+  @include section-width;
+  @include paddings;
+  @include centers;
+  display: flex;
+  align-items: flex-end;
+  padding-top: 90px;
+  position: relative;
+  &::before {
+    position: absolute;
+    z-index: 3;
+    content: "";
+    right: 90px;
+    top: 120px;
+    width: 54px;
+    height: 79px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("../../image/director-leaf.png");
+  }
+}
+.director__title {
+  @include main-title;
+  text-align: left;
+}
+.director__description {
+  font-family: $font--alt;
+  font-size: 24px;
+  line-height: 36px;
+  margin-top: 10px;
+  display: block;
+}
+.director__form-container {
+  width: 450px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding-bottom: 135px;
+}
+.director__form {
+  max-width: 354px;
+}
+.director__label {
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding-left: 20px;
+  margin-top: 32px;
+  display: block;
+}
+.director__input {
+  width: 100%;
+  margin-top: 5px;
+  padding-left: 17px;
+  padding-right: 17px;
+}
+.director__input {
+  @include main-input;
+  font-family: $font--main;
+}
+.director__input::placeholder {
+  color: rgba(26, 45, 70, .4);
+}
+.director__submit {
+  @include main-btn;
+  width: 100%;
+  margin-top: 31px;
+}
+.director__confid {
+  display: block;
+  margin-top: 22px;
+  text-align: center;
+}
+.director__confid-link {
+  text-decoration: underline;
+}
+.director__img-container {
+  font-size: 0;
+  width: 759px;
+  position: relative;
+}
+.director__name-container {
+  position: absolute;
+  font-family: $font--alt;
+  top: 180px;
+  left: 40px;
+  &::before {
+    position: absolute;
+    content: "";
+    left: -20px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#87feff+0,32a5ee+100 */
+    background: #87feff; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #87feff 0%, #32a5ee 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #87feff 0%,#32a5ee 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #87feff 0%,#32a5ee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87feff', endColorstr='#32a5ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 81px;
+    height: 75px;
+    bottom: -90px;
+    left: -7px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("../../image/director-line.png");
+  }
+}
+.director__name {
+  display: block;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.director__job {
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+}

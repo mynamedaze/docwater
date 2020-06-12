@@ -1,0 +1,150 @@
+.feedback__wrapper {
+  padding-top: 75px;
+  padding-bottom: 95px;
+  @include section-width;
+  @include paddings;
+  @include centers;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    right: -380px;
+    top: -245px;
+    width: 461px;
+    height: 563px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("../../image/feedback-drwater.png");
+  }
+}
+.feedback__title {
+  @include main-title;
+  max-width: 860px;
+  @include centers;
+}
+.feedback__slide {
+  padding-top: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+}
+.feedback__author-container {
+  width: 212px;
+  position: relative;
+  flex-shrink: 0;
+  margin-right: 45px;
+  &::after {
+    position: absolute;
+    z-index: 2;
+    content: "";
+    right: -19px;
+    top: -34px;
+    width: 66px;
+    height: 54px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("../../image/quotes.png");
+  }
+}
+.feedback__author-img-container {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.feedback__author-img {
+  position: relative;
+  z-index: 3;
+}
+.feedback__author-name {
+  font-family: $font--alt;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  margin-top: 20px;
+}
+.feedback__author-job {
+  font-family: $font--alt;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 600;
+  margin-top: 3px;
+  display: block;
+}
+.feedback__text-container {
+  flex-grow: 1;
+}
+.feedback__slide-title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 600;
+  font-family: $font--alt;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.feedback__quote {
+  margin-left: 0;
+  font-size: 16px;
+  line-heihgt: 24px;
+  font-weight: 300;
+}
+.feedback__expand-btn {
+  display: inline-block;
+  margin-top: 15px;
+  border: 0 solid transparent;
+  background-color: transparent;
+  color: $color--alt2;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-left: 0;
+  padding-right: 0;
+}
+.feedback {
+  .owl-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 0;
+    margin-top: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-40px);
+  }
+  .owl-prev,
+  .owl-next {
+    font-size: 0 !important;
+    @include slider-arrow;
+    border-radius: 50% !important;
+    background-color: #fff !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 7px 17px !important;
+  }
+  .owl-prev {
+    background-image: url("../../image/arrow-slider--left.png") !important;
+    transform: translateX(-20px);
+  }
+  .owl-next {
+    background-image: url("../../image/arrow-slider--right.png") !important;
+    transform: translateX(20px);
+  }
+}
+.feedback__btns-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.feedback__btn-buy {
+  @include main-btn;
+  width: 305px;
+  margin-right: 13px;
+}
+.feedback__btn-feedback {
+  @include alt-btn;
+  width: 305px;
+  margin-left: 13px;
+}

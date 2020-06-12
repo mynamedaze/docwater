@@ -1,0 +1,131 @@
+.family {
+  background-color: $bg--alt2;
+}
+.family__wrapper {
+  @include centers;
+  @include paddings;
+  @include section-width;
+  position: relative;
+  padding-top: 90px;
+  padding-bottom: 65px;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  &::before {
+    left: -470px;
+    top: -50px;
+    width: 509px;
+    height: 593px;
+    background-image: url("../../image/bg-family-bottle.png");
+  }
+  &::after {
+    right: -420px;
+    bottom: 300px;
+    width: 280px;
+    height: 444px;
+    background-image: url("../../image/bg-family-bubbles.png");
+  }
+}
+.family__title {
+  @include main-title;
+}
+.family__list {
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 45px;
+}
+.family__item {
+  width: 30%;
+  flex-grow: 1;
+  padding: 15px;
+  &:not(:last-child) {
+    .family__item-container {
+      display: flex;
+      flex-direction: column;
+      padding: 15px 18px 30px 18px;
+    }
+    .family__text-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .family__item-description {
+      margin-bottom: auto;
+    }
+    .family__expand-btn {
+      margin-bottom: 0;
+    }
+  }
+  &:last-child {
+    width: 100%;
+    .family__item-container {
+      display: flex;
+      padding: 55px 18px 30px 18px;
+    }
+    .family__img {
+      height: 170px;
+      flex-shrink: 0;
+    }
+    .family__text-container {
+      margin-top: 0;
+    }
+  }
+}
+.family__item-container {
+  background-color: #fff;
+  height: 100%;
+  border-radius: 9px;
+  box-shadow: 0 14px 49px 2px rgba(113, 177, 219, .2);
+}
+.family__img {
+  width: 180px;
+  transform: translateX(-10px);
+}
+.family__item-description {
+  display: block;
+}
+.family__expand-btn {
+  display: inline-block;
+  margin-top: 35px;
+  border: 0 solid transparent;
+  background-color: transparent;
+  color: $color--alt2;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-left: 0;
+  padding-right: 0;
+}
+.family__text-container {
+  margin-top: 15px;
+  flex-grow: 1;
+}
+.family__item-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: $font--alt;
+  font-size: 24px;
+  line-height: 30px;
+}
+.family__item-description {
+  font-size: 18px;
+  line-height: 30px;
+  height: 125px;
+  overflow-y: hidden;
+}
+.family__btn-buy {
+  display: block;
+  position: relative;
+  z-index: 3;
+  @include main-btn;
+  width: 305px;
+  @include centers;
+  margin-top: 25px;
+}

@@ -1,0 +1,43 @@
+.common__wrapper {
+  @include section-width;
+  @include paddings;
+  @include centers;
+}
+.common__title {
+  @include main-title;
+}
+//sertif-russian section
+.common--russian {
+  .common__wrapper {
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+  .sertif {
+    margin-top: 63px;
+  }
+}
+.common--korean {
+  .common__wrapper {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      z-index: 2;
+      left: -8px;
+      top: 170px;
+      width: 126px;
+      height: 108px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url("../../image/sertif-logo.jpg");
+    }
+  }
+  .sertif {
+    margin-top: 63px;
+    position: relative;
+    z-index: 3;
+  }
+}

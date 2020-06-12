@@ -1,0 +1,45 @@
+.othervid__wrapper {
+  @include section-width;
+  @include centers;
+  @include paddings;
+  padding-bottom: 50px;
+  position: relative;
+  z-index: 5;
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  &::before {
+    left: -105px;
+    top: -40px;
+    width: 76px;
+    height: 77px;
+    background-image: url("../../image/othervid-leaf.png");
+  }
+  &::after {
+    right: -570px;
+    bottom: -195px;
+    width: 427px;
+    height: 485px;
+    background-image: url("../../image/othervid-molecula.jpg");
+  }
+}
+.othervid__title {
+  @include main-title;
+  padding-top: 100px;
+  max-width: 580px;
+  @include centers;
+}
+.othervid__btn-buy {
+  display: block;
+  position: relative;
+  z-index: 3;
+  @include main-btn;
+  width: 305px;
+  @include centers;
+  margin-top: 40px;
+}
