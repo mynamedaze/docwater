@@ -5,14 +5,33 @@
   @include section-width;
   @include paddings;
   @include centers;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
   position: relative;
-  padding-top: 60px;
-  padding-bottom: 55px;
+  @media #{$max-mobile-width} {
+    padding-top: 42px;
+    padding-bottom: 39px;
+  }
+  @media #{$min-tablet-width} {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-top: 42px;
+    padding-bottom: 39px;
+  }
+  @media #{$min-desktop-width} {
+    padding-top: 60px;
+    padding-bottom: 55px;
+  }
   &::before,
   &::after {
+    @media #{$max-mobile-width} {
+      display: none;
+    }
+    @media #{$min-tablet-width} {
+      display: none;
+    }
+    @media #{$min-desktop-width} {
+      display: block;
+    }
     position: absolute;
     content: "";
     background-repeat: no-repeat;
@@ -20,30 +39,48 @@
     background-position: center;
   }
   &::before {
-    left: -380px;
-    bottom: -15px;
-    width: 363px;
-    height: 724px;
-    background-image: url("../../image/about-micro.png");
+    @media #{$min-desktop-width} {
+      left: -380px;
+      bottom: -15px;
+      width: 363px;
+      height: 724px;
+      background-image: url("../../image/about-micro.png");
+    }
   }
   &::after {
-    left: -20px;
-    bottom: -35px;
-    width: 621px;
-    height: 231px;
-    background-image: url("../../image/about-water-bg.png");
+    @media #{$min-desktop-width} {
+      left: -20px;
+      bottom: -35px;
+      width: 621px;
+      height: 231px;
+      background-image: url("../../image/about-water-bg.png");
+    }
   }
 }
 .about__title {
   width: 100%;
   @include main-title;
-  margin-bottom: 60px;
+  @media #{$max-mobile-width} {
+    margin-bottom: 42px;
+  }
+  @media #{$min-tablet-width} {
+    margin-bottom: 42px;
+  }
+  @media #{$min-desktop-width} {
+    margin-bottom: 60px;
+  }
 }
 .about__video-container {
-  width: 40%;
-  margin-right: 15px;
-  flex-grow: 1;
   position: relative;
+  @media #{$max-mobile-width} {
+    max-width: $max-mobile-wrapper;
+    @include centers;
+  }
+  @media #{$min-tablet-width} {
+    width: 40%;
+    margin-right: 15px;
+    flex-grow: 1;
+  }
 }
 .about__play-btn {
   @include play-btn;
@@ -53,32 +90,70 @@
   transform: translate(-39px, -39px);
 }
 .about__list {
-  width: 40%;
-  margin-left: 15px;
-  flex-grow: 1;
   padding-left: 0;
+  @media #{$max-mobile-width} {
+    max-width: $max-mobile-wrapper;
+    @include centers;
+  }
+  @media #{$min-tablet-width} {
+    width: 40%;
+    margin-left: 15px;
+    flex-grow: 1;
+  }
 }
 .about__item {
-  font-size: 16px;
-  line-height: 24px;
   background-color: $bg--main;
-  margin-bottom: 10px;
-  padding-left: 67px;
-  padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 13px;
   position: relative;
+  @media #{$max-mobile-width} {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 9px;
+    padding-left: 54px;
+    padding-right: 18px;
+    padding-top: 9px;
+    padding-bottom: 12px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 11px;
+    line-height: 17px;
+    margin-bottom: 7px;
+    padding-left: 47px;
+    padding-right: 14px;
+    padding-top: 7px;
+    padding-bottom: 10px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    padding-left: 67px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 13px;
+  }
   &::before {
     position: absolute;
     content: "";
     top: 50%;
-    left: 22px;
-    width: 20px;
-    height: 20px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     background-image: url("../../image/blue-plus.png");
     transform: translateY(-50%);
+    @media #{$max-mobile-width} {
+      left: 15px;
+      width: 14px;
+      height: 14px;
+    }
+    @media #{$min-tablet-width} {
+      left: 15px;
+      width: 14px;
+      height: 14px;
+    }
+    @media #{$min-desktop-width} {
+      left: 22px;
+      width: 20px;
+      height: 20px;
+    }
   }
 }

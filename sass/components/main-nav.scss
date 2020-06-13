@@ -1,4 +1,16 @@
 .main-nav {
+  @media #{$max-mobile-width} {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    background-color: $bg--main;
+    &.active {
+      display: block;
+    }
+  }
   a,
   a:visited,
   a:active {
@@ -9,10 +21,21 @@
   display: none;
 }
 .main-nav__list {
-  padding-left: 0;
   font-weight: 500;
-  font-size: 12px;
-  line-height: 24px;
+  @media #{$max-mobile-width} {
+    padding-left: 80px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  @media #{$min-tablet-width} {
+    padding-left: 0;
+    font-size: 10px;
+    line-height: 21px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 12px;
+    line-height: 24px;
+  }
   li {
     cursor: pointer;
     text-transform: uppercase;
@@ -20,20 +43,37 @@
 }
 .main-nav__item {
   position: relative;
-  display: inline-block;
-  padding-right: 43px;
+  @media #{$max-mobile-width} {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  @media #{$min-tablet-width} {
+    display: inline-block;
+    padding-right: 30px;
+  }
+  @media #{$min-desktop-width} {
+    padding-right: 43px;
+  }
   &::after {
     position: absolute;
     content: "";
-    right: 25px;
     top: 50%;
     transform: translateY(-50%);
-    width: 10px;
-    height: 4px;
+
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     background-image: url("../../image/nav-expand.png");
+    @media #{$min-tablet-width} {
+      right: 18px;
+      width: 7px;
+      height: 3px;
+    }
+    @media #{$min-desktop-width} {
+      right: 25px;
+      width: 10px;
+      height: 4px;
+    }
   }
   &:hover,
   &.clicked {
@@ -41,13 +81,14 @@
       transform: translateY(-3px) scaleY(-1);
     }
     .main-nav__sublist {
-      position: absolute;
       display: block;
-      left: 0;
-      top: 100%;
       padding: 20px;
-      background-color: #fff;
       width: 250px;
+      @media #{$min-tablet-width} {
+        position: absolute;
+        left: 0;
+        top: 100%;
+      }
     }
   }
 }

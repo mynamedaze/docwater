@@ -2,16 +2,36 @@
   @include section-width;
   @include centers;
   @include paddings;
-  padding-bottom: 50px;
+  @media #{$max-mobile-width} {
+    padding-top: 70px;
+    padding-bottom: 35px;
+  }
+  @media #{$min-tablet-width} {
+    padding-top: 70px;
+    padding-bottom: 35px;
+  }
+  @media #{$min-desktop-width} {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
   position: relative;
   z-index: 5;
   &::before,
   &::after {
-    position: absolute;
-    content: "";
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    @media #{$max-mobile-width} {
+      display: none;
+    }
+    @media #{$min-tablet-width} {
+      display: none;
+    }
+    @media #{$min-desktop-width} {
+      display: block;
+      position: absolute;
+      content: "";
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
   }
   &::before {
     left: -105px;
@@ -30,16 +50,27 @@
 }
 .othervid__title {
   @include main-title;
-  padding-top: 100px;
-  max-width: 580px;
   @include centers;
+  @media #{$max-mobile-width} {
+    max-width: $max-mobile-wrapper;
+  }
+  @media #{$min-tablet-width} {
+    max-width: 580px;
+  }
 }
 .othervid__btn-buy {
   display: block;
   position: relative;
   z-index: 3;
   @include main-btn;
-  width: 305px;
   @include centers;
-  margin-top: 40px;
+  @media #{$max-mobile-width} {
+    margin-top: 0px;
+  }
+  @media #{$min-tablet-width} {
+    margin-top: 28px;
+  }
+  @media #{$min-desktop-width} {
+    margin-top: 40px;
+  }
 }

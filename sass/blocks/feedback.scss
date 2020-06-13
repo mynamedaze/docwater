@@ -1,51 +1,114 @@
 .feedback__wrapper {
-  padding-top: 75px;
-  padding-bottom: 95px;
   @include section-width;
   @include paddings;
   @include centers;
   position: relative;
+  @media #{$max-mobile-width} {
+    padding-top: 52px;
+    padding-bottom: 66px;
+  }
+  @media #{$min-tablet-width} {
+    padding-top: 52px;
+    padding-bottom: 66px;
+  }
+  @media #{$min-desktop-width} {
+    padding-top: 75px;
+    padding-bottom: 95px;
+  }
   &::after {
-    position: absolute;
-    content: "";
-    right: -380px;
-    top: -245px;
-    width: 461px;
-    height: 563px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    background-image: url("../../image/feedback-drwater.png");
+    @media #{$max-mobile-width} {
+      display: none;
+    }
+    @media #{$min-tablet-width} {
+      display: none;
+    }
+    @media #{$min-desktop-width} {
+      display: block;
+      position: absolute;
+      content: "";
+      right: -380px;
+      top: -245px;
+      width: 461px;
+      height: 563px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url("../../image/feedback-drwater.png");
+    }
   }
 }
 .feedback__title {
   @include main-title;
-  max-width: 860px;
   @include centers;
+  @media #{$max-mobile-width} {
+    max-width: $max-mobile-wrapper;
+  }
+  @media #{$min-tablet-width} {
+    max-width: 602px;
+  }
+  @media #{$min-desktop-width} {
+    max-width: 860px;
+  }
 }
 .feedback__slide {
-  padding-top: 40px;
-  padding-left: 30px;
-  padding-right: 30px;
   display: flex;
+  margin-left: 0;
+  margin-right: 0;
+  @media #{$max-mobile-width} {
+    margin-top: 30px;
+  }
+  @media #{$min-tablet-width} {
+    padding-top: 28px;
+    padding-left: 21px;
+    padding-right: 21px;
+  }
+  @media #{$min-desktop-width} {
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 .feedback__author-container {
-  width: 212px;
   position: relative;
   flex-shrink: 0;
-  margin-right: 45px;
+  @media #{$max-mobile-width} {
+    width: 148px !important;
+    margin-right: 31px;
+  }
+  @media #{$min-tablet-width} {
+    width: 148px;
+    margin-right: 31px;
+  }
+  @media #{$min-desktop-width} {
+    width: 212px;
+    margin-right: 45px;
+  }
   &::after {
     position: absolute;
     z-index: 2;
     content: "";
-    right: -19px;
-    top: -34px;
-    width: 66px;
-    height: 54px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     background-image: url("../../image/quotes.png");
+    @media #{$max-mobile-width} {
+      right: -13px;
+      top: -24px;
+      width: 46px;
+      height: 38px;
+    }
+    @media #{$min-tablet-width} {
+      right: -13px;
+      top: -24px;
+      width: 46px;
+      height: 38px;
+    }
+    @media #{$min-desktop-width} {
+      right: -19px;
+      top: -34px;
+      width: 66px;
+      height: 54px;
+    }
   }
 }
 .feedback__author-img-container {
@@ -58,35 +121,79 @@
 }
 .feedback__author-name {
   font-family: $font--alt;
-  font-size: 16px;
-  line-height: 24px;
   font-weight: 300;
-  margin-top: 20px;
+  @media #{$max-mobile-width} {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 16px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 11px;
+    line-height: 17px;
+    margin-top: 14px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 20px;
+  }
 }
 .feedback__author-job {
   font-family: $font--alt;
-  font-size: 12px;
-  line-height: 18px;
   font-weight: 600;
-  margin-top: 3px;
   display: block;
+  @media #{$max-mobile-width} {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 3px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 10px;
+    line-height: 13px;
+    margin-top: 2px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 3px;
+  }
 }
 .feedback__text-container {
   flex-grow: 1;
 }
 .feedback__slide-title {
-  font-size: 24px;
-  line-height: 30px;
   font-weight: 600;
   font-family: $font--alt;
   margin-top: 0;
   margin-bottom: 0;
+  @media #{$max-mobile-width} {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 17px;
+    line-height: 21px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 24px;
+    line-height: 30px;
+  }
 }
 .feedback__quote {
   margin-left: 0;
-  font-size: 16px;
-  line-heihgt: 24px;
   font-weight: 300;
+  @media #{$max-mobile-width} {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 .feedback__expand-btn {
   display: inline-block;
@@ -137,14 +244,23 @@
   display: flex;
   justify-content: center;
   margin-top: 30px;
+  @media #{$max-mobile-width} {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .feedback__btn-buy {
   @include main-btn;
-  width: 305px;
-  margin-right: 13px;
+  @media #{$min-tablet-width} {
+    margin-right: 13px;
+  }
 }
 .feedback__btn-feedback {
   @include alt-btn;
-  width: 305px;
-  margin-left: 13px;
+  @media #{$max-mobile-width} {
+    margin-top: 20px;
+  }
+  @media #{$min-tablet-width} {
+    margin-left: 13px;
+  }
 }

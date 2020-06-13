@@ -3,56 +3,140 @@
   @include paddings;
   @include centers;
   display: flex;
-  align-items: flex-end;
-  padding-top: 90px;
   position: relative;
+  @media #{$max-mobile-width} {
+    flex-direction: column;
+    padding-top: 63px;
+    padding-bottom: 60px;
+  }
+  @media #{$min-tablet-width} {
+    padding-top: 63px;
+    align-items: flex-end;
+  }
+  @media #{$min-desktop-width} {
+    padding-top: 90px;
+  }
   &::before {
     position: absolute;
     z-index: 3;
     content: "";
-    right: 90px;
-    top: 120px;
-    width: 54px;
-    height: 79px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     background-image: url("../../image/director-leaf.png");
+    @media #{$max-mobile-width} {
+      display: none;
+    }
+    @media #{$min-tablet-width} {
+      right: 63px;
+      top: 84px;
+      width: 38px;
+      height: 55px;
+      display: none;
+    }
+    @media #{$min-desktop-width} {
+      display: block;
+      right: 90px;
+      top: 120px;
+      width: 54px;
+      height: 79px;
+    }
   }
 }
 .director__title {
   @include main-title;
-  text-align: left;
+  @media #{$max-mobile-width} {
+    text-align: center;
+    margin-top: 20px;
+  }
+  @media #{$min-tablet-width} {
+    text-align: left;
+  }
 }
 .director__description {
   font-family: $font--alt;
-  font-size: 24px;
-  line-height: 36px;
-  margin-top: 10px;
   display: block;
+  @media #{$max-mobile-width} {
+    font-size: 17px;
+    line-height: 25px;
+    margin-top: 7px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 17px;
+    line-height: 25px;
+    margin-top: 7px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 24px;
+    line-height: 36px;
+    margin-top: 10px;
+  }
 }
 .director__form-container {
-  width: 450px;
   flex-grow: 1;
   flex-shrink: 0;
-  padding-bottom: 135px;
+  @media #{$max-mobile-width} {
+    max-width: $max-mobile-wrapper;
+    @include centers;
+  }
+  @media #{$min-tablet-width} {
+    padding-bottom: 94px;
+    width: 315px;
+  }
+  @media #{$min-desktop-width} {
+    padding-bottom: 135px;
+    width: 450px;
+  }
 }
 .director__form {
-  max-width: 354px;
+  @media #{$max-mobile-width} {
+    max-width: 248px;
+    @include centers;
+  }
+  @media #{$min-tablet-width} {
+    max-width: 248px;
+  }
+  @media #{$min-desktop-width} {
+    max-width: 354px;
+  }
 }
 .director__label {
   font-weight: 700;
-  font-size: 12px;
   text-transform: uppercase;
-  padding-left: 20px;
-  margin-top: 32px;
   display: block;
+  @media #{$max-mobile-width} {
+    font-size: 12px;
+    padding-left: 20px;
+    margin-top: 32px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 10px;
+    padding-left: 14px;
+    margin-top: 22px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 12px;
+    padding-left: 20px;
+    margin-top: 32px;
+  }
 }
 .director__input {
   width: 100%;
-  margin-top: 5px;
-  padding-left: 17px;
-  padding-right: 17px;
+  @media #{$max-mobile-width} {
+    margin-top: 5px;
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+  @media #{$min-tablet-width} {
+    margin-top: 3px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  @media #{$min-desktop-width} {
+    margin-top: 5px;
+    padding-left: 17px;
+    padding-right: 17px;
+  }
 }
 .director__input {
   @include main-input;
@@ -63,27 +147,63 @@
 }
 .director__submit {
   @include main-btn;
-  width: 100%;
-  margin-top: 31px;
+  width: 100% !important;
+  @media #{$max-mobile-width} {
+    margin-top: 22px;
+  }
+  @media #{$min-tablet-width} {
+    margin-top: 22px;
+  }
+  @media #{$min-desktop-width} {
+    margin-top: 31px;
+  }
 }
 .director__confid {
   display: block;
-  margin-top: 22px;
   text-align: center;
+  @media #{$max-mobile-width} {
+    margin-top: 15px;
+  }
+  @media #{$min-tablet-width} {
+    margin-top: 15px;
+  }
+  @media #{$min-desktop-width} {
+    margin-top: 22px;
+  }
 }
 .director__confid-link {
   text-decoration: underline;
 }
 .director__img-container {
+  order: -1;
   font-size: 0;
-  width: 759px;
   position: relative;
+  @media #{$max-mobile-width} {
+    max-width: 240px;
+    @include centers;
+  }
+  @media #{$min-tablet-width} {
+    width: 531px;
+  }
+  @media #{$min-desktop-width} {
+    width: 759px;
+  }
 }
 .director__name-container {
   position: absolute;
   font-family: $font--alt;
-  top: 180px;
-  left: 40px;
+  @media #{$max-mobile-width} {
+    top: 0;
+    left: -70px;
+  }
+  @media #{$min-tablet-width} {
+    top: 126px;
+    left: 28px;
+  }
+  @media #{$min-desktop-width} {
+    top: 180px;
+    left: 40px;
+  }
   &::before {
     position: absolute;
     content: "";
@@ -114,13 +234,33 @@
 }
 .director__name {
   display: block;
-  font-size: 18px;
-  line-height: 24px;
   font-weight: 400;
+  @media #{$max-mobile-width} {
+    font-size: 12px;
+    line-height: 17px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 12px;
+    line-height: 17px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 .director__job {
   display: block;
-  font-size: 16px;
-  line-height: 24px;
   font-weight: 700;
+  @media #{$max-mobile-width} {
+    font-size: 12px;
+    line-height: 17px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 12px;
+    line-height: 17px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

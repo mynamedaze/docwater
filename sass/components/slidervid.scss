@@ -1,7 +1,15 @@
 .slidervid__slider {
   padding-left: 50px;
   padding-right: 50px;
-  margin-top: 60px;
+  @media #{$max-mobile-width} {
+    margin-top: 0px;
+  }
+  @media #{$min-tablet-width} {
+    margin-top: 40px;
+  }
+  @media #{$min-desktop-width} {
+    margin-top: 60px;
+  }
 }
 .slidervid__slide {
   padding: 10px 15px 30px 15px;

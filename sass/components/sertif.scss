@@ -1,25 +1,57 @@
 .sertif {
   display: flex;
   justify-content: space-around;
+  @media #{$max-mobile-width} {
+    flex-wrap: wrap;
+  }
 }
 .sertif__item {
-  width: 23%;
+  @media #{$max-mobile-width} {
+    width: 40%;
+    margin-bottom: 40px;
+  }
+  @media #{$min-tablet-width} {
+    width: 23%;
+  }
 }
 .sertif__img-container {
-  margin-left: 28px;
-  margin-right: 28px;
-  padding: 48px 40px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: 100% 100%;
   background-image: url("../../image/painting-border.jpg");
   box-shadow: 0 0 30px 0 rgba(66, 58, 58, .5);
+  @media #{$max-mobile-width} {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 31px 28px;
+  }
+  @media #{$min-tablet-width} {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 31px 28px;
+  }
+  @media #{$min-desktop-width} {
+    margin-left: 28px;
+    margin-right: 28px;
+    padding: 48px 40px;
+  }
 }
 .sertif__description {
   text-align: center;
-  font-size: 18px;
-  line-height: 24px;
   font-weight: 400;
   display: block;
-  margin-top: 40px;
+  @media #{$max-mobile-width} {
+    font-size: 13px;
+    line-height: 17px;
+    margin-top: 10px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 13px;
+    line-height: 17px;
+    margin-top: 40px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }

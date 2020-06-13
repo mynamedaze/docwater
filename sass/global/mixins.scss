@@ -45,12 +45,27 @@
 }
 @mixin main-btn {
   transition: 0.1s 0s all;
-  height: 75px;
-  border-radius: 30px;
   border: 0 solid transparent;
-  font-size: 14px;
   text-transform: uppercase;
   font-weight: 700;
+  @media #{$max-mobile-width} {
+    font-size: 10px;
+    height: 52px;
+    border-radius: 21px;
+    width: 213px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 10px;
+    height: 52px;
+    border-radius: 21px;
+    width: 213px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 14px;
+    height: 75px;
+    border-radius: 30px;
+    width: 305px;
+  }
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1474d5+0,1f87f0+100 */
   background: #1474d5; /* Old browsers */
   background: -moz-linear-gradient(left,  #1474d5 0%, #1f87f0 100%); /* FF3.6-15 */
@@ -58,7 +73,6 @@
   background: linear-gradient(to right,  #1474d5 0%,#1f87f0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1474d5', endColorstr='#1f87f0',GradientType=1 ); /* IE6-9 */
   color: #ffffff;
-  width: 305px;
   box-shadow: -2px -2px 10px inset rgba(156, 205, 255, 0.9), 0 3px 0 0 #0a4b8b;
   &:hover {
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1bacff+0,0096ff+100 */
@@ -80,15 +94,34 @@
   }
 }
 @mixin alt-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   transition: 0.1s 0s all;
   border: 1px solid #1d76ce;
-  height: 75px;
-  border-radius: 32px;
-  font-size: 14px;
   text-transform: uppercase;
   font-weight: 700;
   background-color: transparent;
   color: $color--main;
+  @media #{$max-mobile-width} {
+    height: 52px;
+    font-size: 10px;
+    width: 213px;
+    border-radius: 22px;
+  }
+  @media #{$min-tablet-width} {
+    height: 52px;
+    font-size: 10px;
+    width: 213px;
+    border-radius: 22px;
+  }
+  @media #{$min-desktop-width} {
+    height: 75px;
+    font-size: 14px;
+    width: 305px;
+    border-radius: 32px;
+  }
   &:hover {
     border: 1px solid #0096ff;
   }
@@ -98,8 +131,18 @@
 }
 @mixin play-btn {
   transition: 0.2s 0s all;
-  height: 78px;
-  width: 78px;
+  @media #{$max-mobile-width} {
+    height: 54px;
+    width: 54px;
+  }
+  @media #{$min-tablet-width} {
+    height: 54px;
+    width: 54px;
+  }
+  @media #{$min-desktop-width} {
+    height: 78px;
+    width: 78px;
+  }
   border-radius: 50%;
   border: 0 solid transparent;
   font-size: 0;
@@ -111,7 +154,12 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87feff', endColorstr='#32a5ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   background-repeat: no-repeat;
   background-position: 55% 50%, center;
-  background-size: 20px auto, 100%;
+  @media #{$min-tablet-width} {
+    background-size: 14px auto, 100%;
+  }
+  @media #{$min-desktop-width} {
+    background-size: 20px auto, 100%;
+  }
   color: #ffffff;
   box-shadow: -2px -2px 10px inset rgba(161, 255, 252, 0.9), 0 3px 0 0 #30a9db;
   &:hover {
@@ -124,6 +172,9 @@
     background-repeat: no-repeat;
     background-position: 55% 50%, center;
     background-size: 20px auto, 100%;
+    @media #{$min-tablet-width} {
+      background-size: 14px auto, 100%;
+    }
     box-shadow: -2px -2px 10px inset rgba(166, 220, 255, .9), 0 3px 0 0 #30a9db;
   }
   &:active {
@@ -140,12 +191,20 @@
   }
 }
 @mixin main-input {
-  height: 75px;
   border: 0 solid transparent;
   border-radius: 32px;
   font-size: 18px;
   background-color: #fff;
   box-shadow: 0 14px 49px 2px rgba(121, 125, 127, .2);
+  @media #{$max-mobile-width} {
+    height: 52px;
+  }
+  @media #{$min-tablet-width} {
+    height: 52px;
+  }
+  @media #{$min-desktop-width} {
+    height: 75px;
+  }
 }
 @mixin slider-arrow {
   transition: 0.2s 0s all;
@@ -163,14 +222,26 @@
   }
 }
 @mixin main-title {
-  font-size: 55px;
-  letter-spacing: -2px;
   font-family: $font--alt;
   font-weight: 400;
-  line-height: 60px;
   text-align: center;
   margin-top: 0;
   margin-bottom: 0;
+  @media #{$max-mobile-width} {
+    letter-spacing: -1px;
+    font-size: 38px;
+    line-height: 42px;
+  }
+  @media #{$min-tablet-width} {
+    letter-spacing: -1px;
+    font-size: 38px;
+    line-height: 42px;
+  }
+  @media #{$min-desktop-width} {
+    letter-spacing: -2px;
+    font-size: 55px;
+    line-height: 60px;
+  }
 }
 @mixin link {
   color: $color-link;

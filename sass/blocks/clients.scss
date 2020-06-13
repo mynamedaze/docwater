@@ -2,8 +2,18 @@
   @include section-width;
   @include centers;
   @include paddings;
-  padding-top: 35px;
-  padding-bottom: 135px;
+  @media #{$max-mobile-width} {
+    padding-top: 24px;
+    padding-bottom: 94px;
+  }
+  @media #{$min-tablet-width} {
+    padding-top: 24px;
+    padding-bottom: 94px;
+  }
+  @media #{$min-desktop-width} {
+    padding-top: 35px;
+    padding-bottom: 135px;
+  }
 }
 .clients__title {
   @include main-title;
@@ -12,18 +22,35 @@
   padding-left: 0;
   max-width: 750px;
   @include centers;
-  font-size: 24px;
   font-family: $font--alt;
   text-align: center;
-  margin-top: 22px;
   font-weight: 400;
+  @media #{$max-mobile-width} {
+    margin-top: 15px;
+    font-size: 17px;
+  }
+  @media #{$min-tablet-width} {
+    margin-top: 15px;
+    font-size: 17px;
+  }
+  @media #{$min-desktop-width} {
+    margin-top: 22px;
+    font-size: 24px;
+  }
 }
 .clients__btn-buy {
   display: block;
   position: relative;
   z-index: 3;
   @include main-btn;
-  width: 305px;
   @include centers;
-  margin-top: 40px;
+  @media #{$max-mobile-width} {
+    margin-top: 28px;
+  }
+  @media #{$min-tablet-width} {
+    margin-top: 28px;
+  }
+  @media #{$min-desktop-width} {
+    margin-top: 40px;
+  }
 }

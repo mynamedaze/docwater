@@ -13,25 +13,70 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .page-header__burger {
+  background-color: #fff;
+  border: 0 solid transparent;
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #fff;
+  background-position: center;
+  background-image: url("../../image/icon-menu-burger.svg");
+  @media #{$max-mobile-width} {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    z-index: 5;
+  }
   @media #{$min-tablet-width} {
     display: none;
+  }
+  &.active {
+    background-image: url("../../image/icon-menu-cross.svg");
   }
 }
 .page-header__phone-container {
   display: flex;
+  @media #{$max-mobile-width} {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  @media #{$min-tablet-width} {
+    flex-direction: column;
+  }
+  @media #{$min-desktop-width} {
+    flex-direction: row;
+  }
 }
 .page-header__phone-link {
-  font-size: 18px;
-  line-height: 24px;
   font-weight: 700;
   font-family: $font--alt;
-  padding-left: 20px;
   color: $color--main;
+  margin-top: 10px;
   &:visited,
   &:active {
     color: $color--main;
+  }
+  @media #{$max-mobile-width} {
+    font-size: 18px;
+    line-height: 24px;
+    padding-left: 20px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 12px;
+    line-height: 17px;
+    padding-left: 14px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 18px;
+    line-height: 24px;
+    padding-left: 20px;
   }
 }
 //sub wrapper
@@ -41,8 +86,18 @@
   @include section-width;
   @include paddings;
   @include centers;
-  padding-top: 5px;
   padding-bottom: 2px;
+  @media #{$max-mobile-width} {
+    flex-wrap: wrap;
+    padding-top: 5px;
+    justify-content: center;
+  }
+  @media #{$min-tablet-width} {
+    padding-top: 3px;
+  }
+  @media #{$min-desktop-width} {
+    padding-top: 5px;
+  }
 }
 .page-header__logo-container {
   width: 81px;
@@ -57,10 +112,19 @@
   color: #00d0da;
   width: 248px;
   margin-right: auto;
+  @media #{$max-mobile-width} {
+    margin-right: 0;
+  }
 }
 .page-header__cart-container {
   display: flex;
   align-items: center;
+  @media #{$max-mobile-width} {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
 .page-header__mail-link {
   display: block;

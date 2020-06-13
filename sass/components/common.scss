@@ -9,35 +9,86 @@
 //sertif-russian section
 .common--russian {
   .common__wrapper {
-    padding-top: 100px;
-    padding-bottom: 40px;
+    @media #{$max-mobile-width} {
+      padding-top: 70px;
+      padding-bottom: 28px;
+    }
+    @media #{$min-tablet-width} {
+      padding-top: 70px;
+      padding-bottom: 28px;
+    }
+    @media #{$min-desktop-width} {
+      padding-top: 100px;
+      padding-bottom: 40px;
+    }
   }
   .sertif {
-    margin-top: 63px;
+    @media #{$max-mobile-width} {
+      margin-top: 44px;
+    }
+    @media #{$min-tablet-width} {
+      margin-top: 44px;
+    }
+    @media #{$min-desktop-width} {
+      margin-top: 63px;
+    }
   }
 }
+//sertif-korean section
 .common--korean {
   .common__wrapper {
-    padding-top: 30px;
-    padding-bottom: 40px;
     position: relative;
+    @media #{$max-mobile-width} {
+      padding-top: 21px;
+      padding-bottom: 28px;
+    }
+    @media #{$min-tablet-width} {
+      padding-top: 21px;
+      padding-bottom: 28px;
+    }
+    @media #{$min-desktop-width} {
+      padding-top: 30px;
+      padding-bottom: 40px;
+    }
     &::before {
       position: absolute;
       content: "";
       z-index: 2;
-      left: -8px;
-      top: 170px;
-      width: 126px;
-      height: 108px;
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
       background-image: url("../../image/sertif-logo.jpg");
+      @media #{$max-mobile-width} {
+        left: 10px;
+        top: 159px;
+        width: 88px;
+        height: 75px;
+      }
+      @media #{$min-tablet-width} {
+        left: -6px;
+        top: 119px;
+        width: 88px;
+        height: 75px;
+      }
+      @media #{$min-desktop-width} {
+        left: -8px;
+        top: 170px;
+        width: 126px;
+        height: 108px;
+      }
     }
   }
   .sertif {
-    margin-top: 63px;
     position: relative;
     z-index: 3;
+    @media #{$max-mobile-width} {
+      margin-top: 44px;
+    }
+    @media #{$min-tablet-width} {
+      margin-top: 44px;
+    }
+    @media #{$min-desktop-width} {
+      margin-top: 63px;
+    }
   }
 }
