@@ -175,12 +175,12 @@
   text-decoration: underline;
 }
 .director__img-container {
-  order: -1;
   font-size: 0;
   position: relative;
   @media #{$max-mobile-width} {
     max-width: 240px;
     @include centers;
+    order: -1;
   }
   @media #{$min-tablet-width} {
     width: 531px;
